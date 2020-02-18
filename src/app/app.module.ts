@@ -8,19 +8,29 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HomeComponent } from './components/home/home.component';
+import {HttpClientModule} from "@angular/common/http";
+import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-details.component';
+import { AddPokemonComponent } from './components/add-pokemon/add-pokemon.component';
+import {FormsModule} from "@angular/forms";
+import { EditPokemonComponent } from './components/edit-pokemon/edit-pokemon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     DashboardComponent,
-    HomeComponent
+    HomeComponent,
+    PokemonDetailsComponent,
+    AddPokemonComponent,
+    EditPokemonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

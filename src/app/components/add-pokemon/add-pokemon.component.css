@@ -1,0 +1,10 @@
+form{
+  max-width: 500px;
+  padding: 5px;
+  border: solid 1px black;
+  margin-left: 35%;
+}
+
+ng-container{
+  background-image: url("https://4wearegamers.com/wp-content/uploads/2017/01/pokedex-digital-art-hd-wallpaper-1920x1080-3210.jpg");
+}

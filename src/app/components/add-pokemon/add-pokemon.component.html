@@ -1,0 +1,111 @@
+<h1>Ajouter un Pokémon :</h1>
+<ng-container *ngIf="!isLoading">
+  <form #validationPokemon = "ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nom du Pokémon :</label>
+      <input type="text" class="form-control" id="name" name="name" required [(ngModel)]="pokemonForm.name" #name="ngModel">
+      <div [hidden]="name.valid" class="alert alert-danger">Veuillez renseigner le nom du Pokémon</div>
+    </div>
+
+    <div class="form-group">
+      <label for="type1-select">Premier type du Pokémon</label>
+      <select name="type1" id="type1-select" required [(ngModel)]="pokemonForm.type1"
+              #type1="ngModel">
+        <option value="">--- Choisir un type ---</option>
+        <option value="acier">Acier</option>
+        <option value="combat">Combat</option>
+        <option value="dragon">Dragon</option>
+        <option value="eau">Eau</option>
+        <option value="electrik">Electrik</option>
+        <option value="fee">Fée</option>
+        <option value="feu">Feu</option>
+        <option value="glace">Glace</option>
+        <option value="insecte">Insecte</option>
+        <option value="normal">Normal</option>
+        <option value="plante">Plante</option>
+        <option value="poison">Poison</option>
+        <option value="psy">Psy</option>
+        <option value="roche">Roche</option>
+        <option value="sol">Sol</option>
+        <option value="spectre">Spectre</option>
+        <option value="tenebres">Ténèbres</option>
+        <option value="vol">Vol</option>
+      </select>
+      <div [hidden]="type1.valid"
+           class="alert alert-danger">
+        Au moins un type est requis
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="type2-select">Deuxième type du Pokémon</label>
+      <select name="type2" id="type2-select" [(ngModel)]="pokemonForm.type2"
+              #type2="ngModel">
+        <option value="">--- Choisir un type ---</option>
+        <option value="acier">Acier</option>
+        <option value="combat">Combat</option>
+        <option value="dragon">Dragon</option>
+        <option value="eau">Eau</option>
+        <option value="electrik">Electrik</option>
+        <option value="fee">Fée</option>
+        <option value="feu">Feu</option>
+        <option value="glace">Glace</option>
+        <option value="insecte">Insecte</option>
+        <option value="normal">Normal</option>
+        <option value="plante">Plante</option>
+        <option value="poison">Poison</option>
+        <option value="psy">Psy</option>
+        <option value="roche">Roche</option>
+        <option value="sol">Sol</option>
+        <option value="spectre">Spectre</option>
+        <option value="tenebres">Ténèbres</option>
+        <option value="vol">Vol</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="pv">Point de vie du Pokémon :</label>
+      <input type="number" class="form-control" id="pv" name="pv" required [(ngModel)]="pokemonForm.pv" #pv="ngModel">
+      <div [hidden]="pv.valid" class="alert alert-danger">Veuillez renseigner les PV du Pokémon</div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="attaque">Attaque du Pokémon :</label>
+      <input type="number" class="form-control" id="attaque" name="attaque" required [(ngModel)]="pokemonForm.attaque" #attaque="ngModel">
+      <div [hidden]="attaque.valid" class="alert alert-danger">Veuillez renseigner l'attaque du Pokémon</div>
+    </div>
+
+    <div class="form-group">
+      <label for="defense">Défense du Pokémon :</label>
+      <input type="number" class="form-control" id="defense" name="defense" required [(ngModel)]="pokemonForm.defense" #defense="ngModel">
+      <div [hidden]="defense.valid" class="alert alert-danger">Veuillez renseigner la défense du Pokémon</div>
+    </div>
+
+    <div class="form-group">
+      <label for="attSpe">Attaque Spéciale du Pokémon :</label>
+      <input type="number" class="form-control" id="attSpe" name="attSpe" required [(ngModel)]="pokemonForm.attSpe" #attSpe="ngModel">
+      <div [hidden]="attSpe.valid" class="alert alert-danger">Veuillez renseigner l'attaque spéciale du Pokémon</div>
+    </div>
+
+    <div class="form-group">
+      <label for="defSpe">Défense Spéciale du Pokémon :</label>
+      <input type="number" class="form-control" id="defSpe" name="defSpe" required [(ngModel)]="pokemonForm.defSpe" #defSpe="ngModel">
+      <div [hidden]="defense.valid" class="alert alert-danger">Veuillez renseigner la défense spéciale du Pokémon</div>
+    </div>
+
+    <div class="form-group">
+      <label for="vitesse">Vitesse du Pokémon :</label>
+      <input type="number" class="form-control" id="vitesse" name="vitesse" required [(ngModel)]="pokemonForm.vitesse" #vitesse="ngModel">
+      <div [hidden]="vitesse.valid" class="alert alert-danger">Veuillez renseigner la vitesse du Pokémon</div>
+    </div>
+
+    <div class="form-group">
+      <label for="dateCapture">Date de capture du Pokémon :</label>
+      <input type="date" class="form-control" id="dateCapture" name="dateCapture" required [(ngModel)]="pokemonForm.dateCapture" #dateCapture="ngModel">
+      <div [hidden]="dateCapture.valid" class="alert alert-danger">Veuillez renseigner une date pour la capture du Pokémon</div>
+    </div>
+    <input class="btn btn-success" type="submit" [disabled]="!validationPokemon.valid">
+  </form>
+</ng-container>

@@ -31,4 +31,18 @@ apiURL = 'http://localhost:3000/pokemon'
     catchError(this.handleError)
   );
   }
+  getPokemonByID(id: number): Observable<Pokemon> {
+    return this.http.get<Pokemon>(this.apiURL+'/'+ id).pipe(retry(1), catchError(this.handleError))
+  }
+  add(pokemon: Pokemon): Observable<Pokemon> {
+  return this.http.post<Pokemon>(this.apiURL, pokemon).pipe(retry(1), catchError(this.handleError))
+  }
+  edit(pokemonToEdit: Pokemon): Observable<Pokemon> {
+    return this.http.put<Pokemon>(this.apiURL+'/'+pokemonToEdit.id, pokemonToEdit).pipe(retry(1), catchError(this.handleError)
+    );
+  }
+  deletePokemon(id: number): Observable<Pokemon>  {
+    return this.http.delete<Pokemon>(this.apiURL+'/'+ id).pipe(retry(1), catchError(this.handleError)
+    );
+  }
 }

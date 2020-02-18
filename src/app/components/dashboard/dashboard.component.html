@@ -6,22 +6,13 @@
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Nom</th>
-      <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let pokemon of pokemons">
       <th scope="row">{{ pokemon.id }}</th>
-      <td>{{ pokemon.name }}</td>
-      <td>
-        <a [routerLink]="['/dashboard/chaussure/edit/', pokemon.id]">
-          <fa-icon [icon]="faEdit"></fa-icon>
-        </a>
-      </td>
+      <td><a [routerLink]="['/pokemon', pokemon.id]">{{ pokemon.name }}</a></td>
     </tr>
     </tbody>
   </table>
-  <a [routerLink]="['/ajout']">
-    <button class="btn btn-success">Ajouter une paire de chaussure</button>
-  </a>
 </ng-container>
