@@ -1,0 +1,27 @@
+<ng-container *ngIf="!isLoading">
+  <h1>Notre Pokédex contient actuellement {{pokemons.length}} pokémon</h1>
+  <h2>Le Pokédex contient :</h2>
+  <table class="table table-dark">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nom</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let pokemon of pokemons">
+      <th scope="row">{{ pokemon.id }}</th>
+      <td>{{ pokemon.name }}</td>
+      <td>
+        <a [routerLink]="['/dashboard/chaussure/edit/', pokemon.id]">
+          <fa-icon [icon]="faEdit"></fa-icon>
+        </a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <a [routerLink]="['/ajout']">
+    <button class="btn btn-success">Ajouter une paire de chaussure</button>
+  </a>
+</ng-container>

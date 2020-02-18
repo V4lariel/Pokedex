@@ -1,0 +1,17 @@
+{
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "Bulbizarre",
+      "type 1": "Plante",
+      "type 2": "Poison",
+      "PV": 45,
+      "attaque": 49,
+      "defense": 49,
+      "attSpe": 65,
+      "defSpe": 65,
+      "vitesse": 45,
+      "dateCapture": "2004-01-29T16:30:28.511Z"
+    }
+  ]
+}
