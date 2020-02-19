@@ -3,6 +3,7 @@
     {
       "id": 1,
       "name": "Bulbizarre",
+      "sexe": 1,
       "type1": "Plante",
       "type2": "Poison",
       "pv": 45,
@@ -11,7 +12,7 @@
       "attSpe": 65,
       "defSpe": 65,
       "vitesse": 45,
-      "dateCapture": "2004-01-29"
+      "dateCapture": "29-01-2004"
     }
   ]
 }

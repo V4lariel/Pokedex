@@ -8,6 +8,13 @@
     </div>
 
     <div class="form-group">
+      <mat-radio-group aria-label="Sélectionner le sexe du Pokémon" id="sexe" name="sexe" required [(ngModel)]="pokemonForm.sexe" #sexe="ngModel">
+        <mat-radio-button value="1">Mâle</mat-radio-button>
+        <mat-radio-button value="2">Femelle</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="form-group">
       <label for="type1-select">Premier type du Pokémon</label>
       <select name="type1" id="type1-select" required [(ngModel)]="pokemonForm.type1"
               #type1="ngModel">

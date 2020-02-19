@@ -1,3 +1,9 @@
 nav {
-  color: white;
+  color: #1E3443;
+  background-color: #5B788E;
+}
+
+a {
+  text-decoration: none;
+  color: #1E3443;
 }

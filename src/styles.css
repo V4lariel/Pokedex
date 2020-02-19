@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #D3D5D8; color: #1E3443;}
+.table{background-color: #61C1BB;}
+form {background-color: #61C1BB;}

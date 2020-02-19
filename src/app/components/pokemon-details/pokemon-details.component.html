@@ -1,11 +1,12 @@
 <ng-container *ngIf="!isLoading">
   <h1>Notre Pokédex contient actuellement {{pokemons.length}} pokémon</h1>
   <h2>Le Pokédex contient :</h2>
-  <table class="table table-dark">
+  <table class="table">
     <thead>
     <tr>
       <th scope="col">Id</th>
       <th scope="col">Nom</th>
+      <th scope="col">Sexe</th>
       <th scope="col">Type 1</th>
       <th scope="col">Type 2</th>
       <th scope="col">PV</th>
@@ -22,6 +23,7 @@
     <tr *ngFor="let pokemon of pokemons">
       <th scope="row">{{ pokemon.id }}</th>
       <td>{{ pokemon.name }}</td>
+      <td>{{ pokemon.sexe }}</td>
       <td>{{ pokemon.type1 }}</td>
       <td>{{ pokemon.type2 }}</td>
       <td>{{pokemon.pv}}</td>

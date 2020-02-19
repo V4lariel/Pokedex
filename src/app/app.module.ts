@@ -13,6 +13,7 @@ import { PokemonDetailsComponent } from './components/pokemon-details/pokemon-de
 import { AddPokemonComponent } from './components/add-pokemon/add-pokemon.component';
 import {FormsModule} from "@angular/forms";
 import { EditPokemonComponent } from './components/edit-pokemon/edit-pokemon.component';
+import {MatRadioModule} from "@angular/material/radio";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EditPokemonComponent } from './components/edit-pokemon/edit-pokemon.com
     BrowserAnimationsModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
